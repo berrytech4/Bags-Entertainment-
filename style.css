@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url("images/bg.jpg") no-repeat center center/cover;
+  background: url("bg.jpg") no-repeat center center/cover;
 }
 
 /* Container Glass Effect */
@@ -128,3 +128,4 @@ button:hover {
     transform: translateY(0);
   }
 }
+
