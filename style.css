@@ -1,0 +1,130 @@
+/* Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: url("images/bg.jpg") no-repeat center center/cover;
+}
+
+/* Container Glass Effect */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 60px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animated Heading */
+.animated-heading {
+  font-size: 2.5em;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffb6b9, #fae3d9, #bbded6, #c7ceea);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateHeading 5s linear infinite;
+  margin-bottom: 30px;
+}
+
+@keyframes animateHeading {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Input Box */
+input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fae3d9, #ffb6b9);
+  color: #333;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(255, 182, 185, 0.5);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffb6b9, #fae3d9);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 182, 185, 0.6);
+}
+
+/* Result Box */
+#result {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+/* Glass Result Styles */
+#result.valid {
+  background: rgba(200, 255, 200, 0.25);
+  color: #2e7d32;
+  box-shadow: 0 0 15px rgba(46, 125, 50, 0.3);
+}
+#result.used {
+  background: rgba(255, 224, 178, 0.25);
+  color: #ef6c00;
+  box-shadow: 0 0 15px rgba(239, 108, 0, 0.3);
+}
+#result.notfound {
+  background: rgba(255, 205, 210, 0.25);
+  color: #c62828;
+  box-shadow: 0 0 15px rgba(198, 40, 40, 0.3);
+}
+
+/* Smooth Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
